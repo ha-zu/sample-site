@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { FunctionComponent } from "react";
-
+import { MemberPanel } from "./MemberPanel";
 const Members = [
   // example
   {
@@ -45,29 +44,7 @@ export const MemberLists: FunctionComponent = ({}) => {
   return (
     <div className="grid grid-cols-3 gap-3">
       {Members.map((member, member_index) => (
-        <div className="w-[280px] h-[390px] bg-gray-100" key={member_index}>
-          <a href="#">
-            <Image src={member.image} width={280} height={280} alt="img" />
-            <div className="flex justify-center">
-              <div className="p-2">
-                <p>
-                  <strong>{member.nameJA}</strong>
-                </p>
-                <p>{member.nameUS}</p>
-              </div>
-            </div>
-            <div className="flex justify-center p-1">
-              {member.departments.map((department, department_index) => (
-                <span
-                  className="m-1 p-1 rounded bg-blue-300"
-                  key={department_index}
-                >
-                  {department}
-                </span>
-              ))}
-            </div>
-          </a>
-        </div>
+        <MemberPanel key={member_index} member={member} />
       ))}
     </div>
   );
