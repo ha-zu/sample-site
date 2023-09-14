@@ -7,9 +7,6 @@ import { MemberSection } from "@/features/member/components/MemberSection";
 import { News } from "@/features/news/components/News";
 import { Service } from "@/features/service/components/Service";
 import { Vision } from "@/features/vision/components/Vision";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
