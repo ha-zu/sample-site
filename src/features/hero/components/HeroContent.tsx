@@ -6,7 +6,11 @@ import Image from "next/image";
 
 export default function HeroContent() {
   return (
-    <FadeIn delay={1} duration={1.5}>
+    <FadeIn
+      className="flex flex-row gap-3 max-w-[1000px] mx-auto p-6"
+      delay={1.5}
+      duration={2.5}
+    >
       <div className="w-1/2">
         <HeroCaption label="アプリ" />
         <HeroTitle className="mt-6" label="テストタイトル" />

@@ -16,7 +16,7 @@ export const MemberPanel: FunctionComponent<Props> = ({
   member,
 }) => {
   return (
-    <div className="w-[280px] h-[390px] bg-gray-100">
+    <div className="w-full my-2 max-w-[280px] h-[390px] bg-gray-100">
       <a href="#">
         <Image src={member.image} width={280} height={280} alt="img" />
         <div className="flex justify-center">

@@ -8,7 +8,7 @@ interface Props {
   duration?: number;
 }
 
-export const FadeIn: FunctionComponent<Props> = ({
+export const SlideIn: FunctionComponent<Props> = ({
   children,
   className = "",
   delay = 0,
@@ -17,9 +17,11 @@ export const FadeIn: FunctionComponent<Props> = ({
   const variants = {
     hidden: {
       opacity: 0,
+      width: "0%",
     },
     visible: {
       opacity: 1,
+      width: "100%",
       transition: {
         delay: delay,
         duration: duration,

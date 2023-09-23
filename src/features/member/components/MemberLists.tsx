@@ -42,7 +42,7 @@ const Members = [
 
 export const MemberLists: FunctionComponent = ({}) => {
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className={`grid grid-cols-1 md:grid-cols-3 md:gap-3`}>
       {Members.map((member, member_index) => (
         <MemberPanel key={member_index} member={member} />
       ))}
