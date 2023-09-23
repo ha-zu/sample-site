@@ -6,6 +6,8 @@ interface Props {
   className?: string;
   delay?: number;
   duration?: number;
+  startX?: string;
+  endX?: string;
 }
 
 export const SlideIn: FunctionComponent<Props> = ({
@@ -13,15 +15,17 @@ export const SlideIn: FunctionComponent<Props> = ({
   className = "",
   delay = 0,
   duration = 0,
+  startX = "0%",
+  endX = "0%",
 }) => {
   const variants = {
     hidden: {
       opacity: 0,
-      width: "0%",
+      x: startX,
     },
     visible: {
       opacity: 1,
-      width: "100%",
+      x: endX,
       transition: {
         delay: delay,
         duration: duration,

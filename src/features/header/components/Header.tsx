@@ -8,27 +8,14 @@ export const Header = () => {
 
   useEffect(() => {
     if (scrollY > window?.innerHeight) {
-      setHeaderStyle(`
-      fixed
-      w-full h-16
-      px-6
-      bg-primary
-      text-white
-      `);
+      setHeaderStyle("bg-primary");
     } else {
-      setHeaderStyle(
-        `fixed
-        w-full h-16
-        px-6
-        bg-transparent
-        text-white
-        `
-      );
+      setHeaderStyle("bg-transparent");
     }
   }, [scrollY]);
 
   return (
-    <header className={headerStyle}>
+    <header className={`fixed w-full h-16 px-6 ${headerStyle} text-white`}>
       <div
         className={`
         container
