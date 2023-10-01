@@ -1,3 +1,4 @@
+import { FadeIn } from "@/features/base/components/FadeIn";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
@@ -22,7 +23,9 @@ export default function Navigation() {
       {/* PC */}
       <ul className="hidden md:flex flex-row space-x-4">
         {MenuList.map((menu, menuIndex) => (
-          <li key={menuIndex}>{menu}</li>
+          <FadeIn delay={1 + 0.3 * menuIndex} duration={1} key={menuIndex}>
+            <li>{menu}</li>
+          </FadeIn>
         ))}
       </ul>
 

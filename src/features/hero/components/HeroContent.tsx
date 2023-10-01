@@ -8,8 +8,8 @@ export default function HeroContent() {
   return (
     <FadeIn
       className="flex flex-row gap-3 max-w-[1000px] mx-auto p-6"
-      delay={1.5}
-      duration={2.5}
+      delay={2.5}
+      duration={2}
     >
       <div className="w-1/2">
         <HeroCaption label="アプリ" />

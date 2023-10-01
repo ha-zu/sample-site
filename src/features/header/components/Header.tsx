@@ -1,21 +1,41 @@
 import { FadeIn } from "@/features/base/components/FadeIn";
 import { useScrollPosition } from "@/features/base/hooks/useScroolPosition";
-import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 import Navigation from "./Navigation";
+
+const variants = {
+  init: {
+    color: "rgb(255, 255, 255)",
+    backgroundColor: "rgba(0, 0, 0, 0)",
+    borderButtom: "1.5px solid rgba(0, 0, 0, 0)",
+  },
+  beyond: {
+    color: "rgb(0, 0, 0)",
+    backgroundColor: "white",
+    borderButtom: "1.5px solid #eaeaea",
+  },
+};
+
 export const Header = () => {
   const { scrollY } = useScrollPosition();
-  const [headerStyle, setHeaderStyle] = useState("");
+  const controls = useAnimation();
 
   useEffect(() => {
     if (scrollY > window?.innerHeight) {
-      setHeaderStyle("bg-primary");
+      controls.start("beyond");
     } else {
-      setHeaderStyle("bg-transparent");
+      controls.start("init");
     }
   }, [scrollY]);
 
   return (
-    <header className={`fixed w-full h-16 px-6 ${headerStyle} text-white`}>
+    <motion.header
+      className={`fixed w-full h-16 z-50 px-6 text-white`}
+      initial="init"
+      variants={variants}
+      animate={controls}
+    >
       <div
         className={`
         container
@@ -28,10 +48,8 @@ export const Header = () => {
         <FadeIn delay={0.5} duration={1.5}>
           <div>LOGO</div>
         </FadeIn>
-        <FadeIn delay={1} duration={1.5}>
-          <Navigation />
-        </FadeIn>
+        <Navigation />
       </div>
-    </header>
+    </motion.header>
   );
 };
