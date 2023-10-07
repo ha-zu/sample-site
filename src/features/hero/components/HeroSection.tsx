@@ -9,7 +9,10 @@ export const HeroSection = () => {
       endX="0%"
       className="bg-slate-800"
     >
-      <div className="h-screen pt-[64px] pb-[64px]  text-white flex items-center justify-center">
+      <div
+        id="top"
+        className="h-screen pt-[64px] pb-[64px]  text-white flex items-center justify-center"
+      >
         <HeroContent />
       </div>
     </SlideIn>

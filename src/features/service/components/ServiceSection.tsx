@@ -1,3 +1,7 @@
 export const ServiceSection = () => {
-  return <div>Service</div>;
+  return (
+    <section id="service">
+      <div>Service</div>
+    </section>
+  );
 };

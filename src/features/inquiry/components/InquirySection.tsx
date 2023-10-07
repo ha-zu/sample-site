@@ -1,3 +1,7 @@
 export const InquirySection = () => {
-  return <div>Inquiry</div>;
+  return (
+    <section id="inquire">
+      <div>Inquiry</div>
+    </section>
+  );
 };

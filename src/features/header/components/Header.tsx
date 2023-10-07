@@ -1,6 +1,7 @@
 import { FadeIn } from "@/features/base/components/FadeIn";
 import { useScrollPosition } from "@/features/base/hooks/useScroolPosition";
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 import { useEffect } from "react";
 import Navigation from "./Navigation";
 
@@ -46,7 +47,9 @@ export const Header = () => {
       `}
       >
         <FadeIn delay={0.1} duration={1.5}>
-          <div>LOGO</div>
+          <div>
+            <Link href="#top">LOGO</Link>
+          </div>
         </FadeIn>
         <Navigation />
       </div>

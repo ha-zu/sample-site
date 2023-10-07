@@ -1,16 +1,27 @@
 import { FadeIn } from "@/features/base/components/FadeIn";
+import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-const MenuList = [
-  "ホーム",
-  "ビジョン",
-  "ニュース",
-  "サービス",
-  "メンバー",
-  "会社情報",
-  "お問合せ",
+const Menu = [
+  "Home",
+  "Vision",
+  "News",
+  "Service",
+  "Member",
+  "Coporate",
+  "Inquire",
 ];
+
+const MenuList = {
+  Home: "#top",
+  Vision: "#vision",
+  News: "#news",
+  Service: "#service",
+  Member: "#member",
+  Coporate: "#corporate",
+  Inquire: "#inquire",
+};
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +33,11 @@ export default function Navigation() {
 
       {/* PC */}
       <ul className="hidden md:flex flex-row space-x-4">
-        {MenuList.map((menu, menuIndex) => (
+        {Menu.map((menu, menuIndex) => (
           <FadeIn delay={1 + 0.3 * menuIndex} duration={1} key={menuIndex}>
-            <li>{menu}</li>
+            <Link href={MenuList[menu]}>
+              <li>{menu}</li>
+            </Link>
           </FadeIn>
         ))}
       </ul>
