@@ -1,26 +1,26 @@
-import { Company } from "@/features/company/components/Company";
-import { Footer } from "@/features/footer/components/Footer";
+import { CorporateSection } from "@/features/company/components/CorporateSection";
+import { FooterSection } from "@/features/footer/components/FooterSection";
 import { Header } from "@/features/header/components/Header";
-import { Hero } from "@/features/hero/components/Hero";
-import { Inquiry } from "@/features/inquiry/components/Inquiry";
+import { HeroSection } from "@/features/hero/components/HeroSection";
+import { InquirySection } from "@/features/inquiry/components/InquirySection";
 import { MemberSection } from "@/features/member/components/MemberSection";
 import { NewsSection } from "@/features/news/components/NewsSection";
-import { Service } from "@/features/service/components/Service";
-import { Vision } from "@/features/vision/components/Vision";
+import { ServiceSection } from "@/features/service/components/ServiceSection";
+import { VisionSection } from "@/features/vision/components/VisionSection";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <Vision />
+      <HeroSection />
+      <VisionSection />
       <NewsSection />
-      <Service />
+      <ServiceSection />
       <MemberSection />
-      <div className="h-screen"></div>
-      <Company />
-      <Inquiry />
-      <Footer />
+      {/* <div className="h-screen"></div> */}
+      <CorporateSection />
+      <InquirySection />
+      <FooterSection />
     </>
   );
 }

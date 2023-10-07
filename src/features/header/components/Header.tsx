@@ -45,7 +45,7 @@ export const Header = () => {
         mx-auto
       `}
       >
-        <FadeIn delay={0.5} duration={1.5}>
+        <FadeIn delay={0.1} duration={1.5}>
           <div>LOGO</div>
         </FadeIn>
         <Navigation />

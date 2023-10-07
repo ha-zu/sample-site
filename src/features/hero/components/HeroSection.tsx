@@ -1,6 +1,6 @@
 import { SlideIn } from "@/features/base/components/SlideIn";
 import HeroContent from "./HeroContent";
-export const Hero = () => {
+export const HeroSection = () => {
   return (
     <SlideIn
       delay={0}

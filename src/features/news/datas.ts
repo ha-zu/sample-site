@@ -9,7 +9,7 @@ export const mockNewsList: News[] = [
   {
     id: "2",
     upload: "2023/09/30",
-    title: "test_title",
+    title: "test_title test_title",
     content: "test",
   },
 ];

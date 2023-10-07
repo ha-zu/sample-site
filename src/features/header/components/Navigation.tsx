@@ -29,7 +29,7 @@ export default function Navigation() {
         ))}
       </ul>
 
-      {/* Modal */}
+      {/* Mobile */}
       {isOpen && (
         <div className="fixed inset-6 bg-white text-black">
           <div className="relative">
