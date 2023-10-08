@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-const Menu = [
+const Menu: string[] = [
   "Home",
   "Vision",
   "News",
@@ -14,7 +14,7 @@ const Menu = [
   "Inquire",
 ];
 
-const MenuList = {
+const MenuList: { [key: string]: string } = {
   Home: "#top",
   Vision: "#vision",
   News: "#news",
@@ -75,7 +75,7 @@ export default function Navigation() {
                       href={MenuList[menu]}
                       onClick={() => setIsOpen(!isOpen)}
                     >
-                      <div>{menu}</div>
+                      {menu}
                     </Link>
                   </FadeIn>
                 ))}
